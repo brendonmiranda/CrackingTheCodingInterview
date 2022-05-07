@@ -11,6 +11,7 @@ public class Question51 {
 
     public static long insertMIntoN(Long n, Long m, int i, int j) {
 
+        // my solution
         // 1. clean the bits of N between i and j, also i and j itself.
         // 2. shift M to the left based on i
         // 3. set M into the N (after clean)
