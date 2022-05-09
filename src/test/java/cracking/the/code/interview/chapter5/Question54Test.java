@@ -14,12 +14,16 @@ public class Question54Test {
 
         Map<Question45Return, Long> map = question54.smallestAndLargestForTheSameNumberOf1s(13948);
         Assertions.assertEquals(13946, map.get(Question45Return.SMALLEST));
+        Assertions.assertEquals(13967, map.get(Question45Return.LARGEST));
 
         map = question54.smallestAndLargestForTheSameNumberOf1s(914);
         Assertions.assertEquals(913, map.get(Question45Return.SMALLEST));
+        Assertions.assertEquals(916, map.get(Question45Return.LARGEST));
 
         map = question54.smallestAndLargestForTheSameNumberOf1s(8191);
         Assertions.assertEquals(0, map.get(Question45Return.SMALLEST));
+        Assertions.assertEquals(12287, map.get(Question45Return.LARGEST));
+
     }
 
     // testing logic support methods
