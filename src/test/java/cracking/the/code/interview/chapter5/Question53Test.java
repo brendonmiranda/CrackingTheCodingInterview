@@ -7,9 +7,15 @@ public class Question53Test {
 
     @Test
     public void test() {
-        Assertions.assertEquals(8, Question53.findLongestSequenceOf1s(1775)); // 11011101111
-        Assertions.assertEquals(9, Question53.findLongestSequenceOf1s(1279)); // 10011111111
-        Assertions.assertEquals(9, Question53.findLongestSequenceOf1s(495)); // 111101111
+
+        Assertions.assertEquals(1, Question53.findLongestSequenceOf1s(0));
+        Assertions.assertEquals(8, Question53.findLongestSequenceOf1s(0B11011101111));
+        Assertions.assertEquals(9, Question53.findLongestSequenceOf1s(0B10011111111));
+        Assertions.assertEquals(9, Question53.findLongestSequenceOf1s(0B111101111));
+        Assertions.assertEquals(7, Question53.findLongestSequenceOf1s(0B1111110001111));
+        Assertions.assertEquals(7, Question53.findLongestSequenceOf1s(0B111111001111));
+        Assertions.assertEquals(9, Question53.findLongestSequenceOf1s(0B111111110111111001111));
+
     }
 
 }

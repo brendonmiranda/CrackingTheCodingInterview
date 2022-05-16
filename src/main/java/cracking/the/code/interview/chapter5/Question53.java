@@ -8,34 +8,38 @@ public class Question53 {
 
     public static int findLongestSequenceOf1s(long n) {
 
-        // my solution
-        // 1. take the binary string format based on the given number
-        // 2. loop through each char of the string. remember to invert the loop, so you can go from the right to the left of the binary number.
-        // 3. when find 1, add, when find first 0, flip, when find second 0 break the loop and return the value.
+        int count = 0;
+        int total = 0;
+        boolean isTheFirstZero = true;
 
-        int value = 0;
-        boolean flipped = false;
+        do {
+            if ((n & 1L) != 0) { // it is 1
+                count++;
+            } else { // it is 0
+                if (isTheFirstZero) {
+                    count++;
+                    isTheFirstZero = false;
+                } else { // it is the second zero
+                    count = 0;
+                    isTheFirstZero = true;
 
-        String binaryString = Long.toBinaryString(n);
-
-        for (int i = binaryString.toCharArray().length; i > 0; i--) {
-
-            char c = binaryString.toCharArray()[i - 1];
-            byte v = Byte.parseByte(Character.toString(c));
-
-            if (v == 0) {
-                if (!flipped) {
-                    value++;
-                    flipped = true;
-                } else {
-                    break;
+                    // if the next value after the second zero is a 1, it starts the count from this zero (this will be the first zero)
+                    if (((n >>> 1L) & 1) != 0) {
+                        count = 1;
+                        isTheFirstZero = false;
+                    }
                 }
-            } else {
-                value++;
             }
-        }
 
-        return value;
+            if (count > total) {
+                total = count;
+            }
+
+            n = n >>> 1L;
+
+        } while (n != 0);
+
+        return total;
     }
 
 
