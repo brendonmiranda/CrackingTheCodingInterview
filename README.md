@@ -9,3 +9,5 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 [**5.3** Binary to String: You have an integer, and you can flip exactly one bit from 0 to 1. Write code to find the length of the longest sequence of 1's you could create.](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter5/Question53.java)
 
 [**5.4** Next Number: Given a positive integer, print the next smallest and the next largest number that have the same number of 1 bits in their binary representation.](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter5/Question54.java)
+
+[**5.6** Conversion: Write a function to determine the number of bits you would need to flip to convert integer A to integer B](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter5/Question56.java)
