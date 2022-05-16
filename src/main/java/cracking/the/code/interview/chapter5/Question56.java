@@ -5,26 +5,25 @@ package cracking.the.code.interview.chapter5;
  */
 public class Question56 {
 
-    public static final int BITS_SIZE = 32;
-
     // a = 11101
     // b = 01111
     // n = 2
-    public int numberOfBitsToFlipToConvertAIntoB(long a, long b) {
+
+    // xor = 10010
+    // count how many ones the result of a XOR operation between 'a' and 'b' has
+   public int numberOfBitsToFlipToConvertAIntoB(long a, long b) {
         int n = 0;
 
         long xor = a ^ b;
-        for (int i = 0; i < BITS_SIZE; i++) {
-            if (get(xor, i)) {
+        while (xor != 0) {
+            if((xor & 1L) != 0)
                 n++;
-            }
+
+            xor = xor >>> 1L;
+
         }
 
         return n;
-    }
-
-    private boolean get(long n, int position) {
-        return (n & (1L << position)) != 0;
     }
 
 }
