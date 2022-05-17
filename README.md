@@ -11,3 +11,5 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 [**5.4** Next Number: Given a positive integer, print the next smallest and the next largest number that have the same number of 1 bits in their binary representation.](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter5/Question54.java)
 
 [**5.6** Conversion: Write a function to determine the number of bits you would need to flip to convert integer A to integer B](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter5/Question56.java)
+
+[**5.7** Pairwise Swap: Write a program to swap odd and even bits in an integer with as few instructions as possible.](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter5/Question57.java)
