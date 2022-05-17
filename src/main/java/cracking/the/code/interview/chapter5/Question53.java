@@ -8,38 +8,34 @@ public class Question53 {
 
     public static int findLongestSequenceOf1s(long n) {
 
-        int count = 0;
-        int total = 0;
-        boolean isTheFirstZero = true;
+        int current = 0;
+        int previous = 0;
+        int max = 1;
 
-        do {
-            if ((n & 1L) != 0) { // it is 1
-                count++;
-            } else { // it is 0
-                if (isTheFirstZero) {
-                    count++;
-                    isTheFirstZero = false;
-                } else { // it is the second zero
-                    count = 0;
-                    isTheFirstZero = true;
+        while (n != 0) {
 
-                    // if the next value after the second zero is a 1, it starts the count from this zero (this will be the first zero)
-                    if (((n >>> 1L) & 1) != 0) {
-                        count = 1;
-                        isTheFirstZero = false;
-                    }
+            if ((n & 1) != 0) {
+                current++;
+            } else {
+                if ((n & 2) != 0) { // next bit is one
+                    previous = current;
+                    current = 0;
+                } else { // next bit is zero
+                    previous = 0;
+                    current = 0;
                 }
             }
 
-            if (count > total) {
-                total = count;
+            if (max < (current + previous + 1)) {
+                max = current + previous + 1;
             }
 
             n = n >>> 1L;
 
-        } while (n != 0);
+        }
 
-        return total;
+        return max;
+
     }
 
 
