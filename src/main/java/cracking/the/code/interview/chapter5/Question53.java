@@ -19,11 +19,10 @@ public class Question53 {
             } else {
                 if ((n & 2) != 0) { // next bit is one
                     previous = current;
-                    current = 0;
                 } else { // next bit is zero
                     previous = 0;
-                    current = 0;
                 }
+                current = 0;
             }
 
             if (max < (current + previous + 1)) {
