@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/55976463d16f954ca4b305612d0c2dd87b64152c/src/main/resources/one-month-preparation-kit-sparse-arrays-English.pdf
+ * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/resources/one-month-preparation-kit-sparse-arrays-English.pdf
  * This is a O(s+q) time complexity solution where s=strings list and q=queries list.
  * It's more performant than the traditional quadratic time complexity solution O(s*q) where we create two nested For loops.
  */

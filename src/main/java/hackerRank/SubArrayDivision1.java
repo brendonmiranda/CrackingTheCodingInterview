@@ -3,7 +3,7 @@ package hackerRank;
 import java.util.List;
 
 /**
- * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/95e39ba850b3bc12a6285baa68cd1ef0eb6fdf9c/src/main/resources/one-month-preparation-kit-the-birthday-bar-English.pdf
+ * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/resources/one-month-preparation-kit-the-birthday-bar-English.pdf
  * This is a window sliding problem. For understanding support please check: https://www.geeksforgeeks.org/window-sliding-technique/
  * I guess the time complexity would be O(s*m) where s = the array size & m = segment size
  */

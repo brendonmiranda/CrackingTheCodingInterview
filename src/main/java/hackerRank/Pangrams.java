@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/95e39ba850b3bc12a6285baa68cd1ef0eb6fdf9c/src/main/resources/one-month-preparation-kit-pangrams-English.pdf
+ * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/resources/one-month-preparation-kit-pangrams-English.pdf
  * I guess this is a O(n) time complexity solution where (n = String size).
  */
 public class Pangrams {
