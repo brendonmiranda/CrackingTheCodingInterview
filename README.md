@@ -12,6 +12,8 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [DiagonalDifference](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/DiagonalDifference.java)
 
+[Counting Sort 1](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/CountingSort1.java)
+
 [Pangrams](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/Pangrams.java)
 
 [SubArrayDivision1](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/SubArrayDivision1.java)
