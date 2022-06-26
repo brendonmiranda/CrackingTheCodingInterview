@@ -1,4 +1,4 @@
-package hackerRank;
+package hackerRank.week1;
 
 import java.util.List;
 

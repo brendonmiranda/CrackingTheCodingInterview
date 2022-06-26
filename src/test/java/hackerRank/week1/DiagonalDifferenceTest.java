@@ -1,5 +1,6 @@
-package hackerRank;
+package hackerRank.week1;
 
+import hackerRank.week1.DiagonalDifference;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
