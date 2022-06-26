@@ -4,11 +4,18 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 # Hackerrank.com Challenges
 
-[Pangrams](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/Pangrams.java)
+[SparseArrays](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/SparseArrays.java)
 
-[SparseArrays](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/SparseArrays.java)
+[LonelyInteger](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/LonelyInteger.java)
 
-[SubArrayDivision1](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/SubArrayDivision1.java)
+[FlippingBits](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/FlippingBits.java)
+
+[DiagonalDifference](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/DiagonalDifference.java)
+
+[Pangrams](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/Pangrams.java)
+
+[SubArrayDivision1](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/SubArrayDivision1.java)
+
 
 # Chapter 5 | Bit Manipulation
 
