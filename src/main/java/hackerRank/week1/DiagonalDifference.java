@@ -2,6 +2,9 @@ package hackerRank.week1;
 
 import java.util.List;
 
+/**
+ * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/resources/one-month-preparation-kit-diagonal-difference-English.pdf
+ */
 public class DiagonalDifference {
 
     public int diagonalDifference(List<List<Integer>> arr) {

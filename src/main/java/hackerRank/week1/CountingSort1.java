@@ -3,6 +3,9 @@ package hackerRank.week1;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/resources/one-month-preparation-kit-countingsort1-English.pdf
+ */
 public class CountingSort1 {
 
     public List<Integer> countingSort(List<Integer> arr) {
