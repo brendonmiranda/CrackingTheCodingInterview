@@ -9,6 +9,8 @@ import java.util.List;
  */
 public class SubArrayDivision1 {
 
+    // TODO: improve it to be o(n)
+
     public int birthday(List<Integer> s, int d, int m) {
 
         /* The length of the segment = Ron's birthMONTH
