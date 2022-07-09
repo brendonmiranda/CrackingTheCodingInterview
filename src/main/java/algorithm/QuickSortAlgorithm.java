@@ -1,6 +1,6 @@
 package algorithm;
 
-public class QuickSort {
+public class QuickSortAlgorithm {
 
     public void quickSort(int[] arr, int left, int right) {
         if (left >= right) {
@@ -46,6 +46,5 @@ public class QuickSort {
 
         return left;
     }
-
 
 }
