@@ -31,3 +31,6 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [**5.7** Pairwise Swap: Write a program to swap odd and even bits in an integer with as few instructions as possible.](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter5/Question57.java)
 
+# Chapter 10 | Sorting and Searching
+
+[My Quick Sort Implementation](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/algorithm/QuickSort.java)
