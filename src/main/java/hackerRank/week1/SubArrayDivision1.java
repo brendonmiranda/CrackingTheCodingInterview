@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Problem statement: https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/resources/one-month-preparation-kit-the-birthday-bar-English.pdf
  * This is a window sliding problem. For understanding support please check: https://www.geeksforgeeks.org/window-sliding-technique/
- * I guess the time complexity would be O(s*m) where s = the array size & m = segment size
+ * This a linear time complexity solution O(s). 
  */
 public class SubArrayDivision1 {
 
