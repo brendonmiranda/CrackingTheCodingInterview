@@ -9,8 +9,6 @@ import java.util.List;
  */
 public class SubArrayDivision1 {
 
-    // TODO: improve it to be o(n)
-
     public int birthday(List<Integer> s, int d, int m) {
 
         /* The length of the segment = Ron's birthMONTH
@@ -36,24 +34,35 @@ public class SubArrayDivision1 {
             \_1_|
             \_3_|
             \_2_|
+
          */
-        int count = 0;
-        for (int i = 0; i < (s.size() - (m - 1)); i++) {
 
-            final List<Integer> subList = s.subList(i, i + m);
+        int sum = 0; // the sum of the sublist
+        int count = 0; // how many sublist sums to Ron's birthday
 
-            int subListSum = 0;
-            for (int j = 0; j < subList.size(); j++) {
-                subListSum += subList.get(j);
+        List<Integer> firstSublist = s.subList(0, m); // first sublist
+
+        for (Integer i : firstSublist) { // create a for to count the first sublist
+            sum += i;
+        }
+
+        if (sum == d) { // check if it sums to his birthday
+            count++;
+        }
+
+        // create a for
+        for (int i = 1; i <= s.size() - m; i++) {
+
+            sum -= s.get(i - 1); // remove the first index of the previous sublist from the sum
+
+            sum += s.get((i + m) - 1); // add the last index of the previous sublist +1 to the sum
+
+            if (sum == d) {
+                count++;
             }
-
-            if (subListSum == d)
-                count+=1;
-
         }
 
         return count;
-
     }
 
 }

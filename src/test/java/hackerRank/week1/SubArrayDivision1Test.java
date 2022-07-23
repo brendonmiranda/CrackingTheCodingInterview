@@ -18,6 +18,8 @@ public class SubArrayDivision1Test {
 
         Assertions.assertEquals(1, subArrayDivision1.birthday(List.of(4), 4, 1));
 
+        Assertions.assertEquals(3, subArrayDivision1.birthday(List.of(2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1), 18, 7));
+
     }
 
 }
