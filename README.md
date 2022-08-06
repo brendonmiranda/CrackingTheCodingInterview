@@ -39,3 +39,6 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 # OOP - Object Oriented Programming 
 
 [Polymorphism](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/oop/polymorphism/README.md)
+[Abstraction]()
+[Encapsulation]()
+[Inheritance]()
