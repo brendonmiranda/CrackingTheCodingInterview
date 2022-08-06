@@ -4,6 +4,7 @@ Encapsulation means that only methods in the class with the variables can refer 
 
 For data to be encapsulated, you don't have to provide getters and setters. As long as the instance variables are private, you are good.
 
+[Check the example clicking here.](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/oop/encapsulation/Person.java)
 
 
 
