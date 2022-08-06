@@ -40,8 +40,8 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Polymorphism](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/oop/polymorphism/README.md)
 
-[Abstraction]()
+[Abstraction](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/oop/abstraction/README.md)
 
 [Encapsulation](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/oop/encapsulation/README.md)
 
-[Inheritance]()
+[Inheritance](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/oop/inheritance/README.md)
