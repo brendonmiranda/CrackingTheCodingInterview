@@ -11,7 +11,7 @@ import java.util.Set;
  */
 public class SalesByMatch {
 
-    public static int sockMerchant(int n, List<Integer> ar) {
+    public int sockMerchant(int n, List<Integer> ar) {
 
         int pairs = 0;
 
