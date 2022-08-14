@@ -20,6 +20,9 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Flipping the Matrix](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week1/FlippingMatrix.java)
 
+[Sales by Match](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week2/SalesByMatch.java)
+
+[Drawing Book](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week2/DrawingBook.java)
 
 # Chapter 5 | Bit Manipulation
 
