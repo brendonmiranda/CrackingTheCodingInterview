@@ -22,19 +22,9 @@ public class MaximumNumberOfRepeatedStrings {
 
         for(String s: stringList) {
 
-            StringBuilder builder = new StringBuilder();
-            builder.append(s.charAt(1));
-            builder.append(s.charAt(0));
-            builder.append(s.charAt(2));
+            String firstString = String.valueOf(s.charAt(1) + s.charAt(0) + s.charAt(2));
 
-            String firstString = builder.toString();
-
-            StringBuilder builderx = new StringBuilder();
-            builderx.append(s.charAt(0));
-            builderx.append(s.charAt(2));
-            builderx.append(s.charAt(1));
-
-            String secondString = builderx.toString();
+            String secondString = String.valueOf(s.charAt(0) + s.charAt(2) + s.charAt(1));
 
             Integer firstValue = map.getOrDefault(firstString, 0);
             Integer secondValue = map.getOrDefault(secondString, 0);
