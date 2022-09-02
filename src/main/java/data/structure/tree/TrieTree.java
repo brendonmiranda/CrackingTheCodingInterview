@@ -1,6 +1,10 @@
 package data.structure.tree;
 
-
+/**
+ * Very commonly, a trie is used to store the entire (English) language for quick prefix lookup.
+ * While a hash table can quickly look up whether a string is a valid word, it cannot tell us if a string is a prefix of any valid words.
+ * A trie can do this very quickly.
+ */
 public class TrieTree {
 
     public static class Trie {
