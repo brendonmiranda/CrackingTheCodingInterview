@@ -1,6 +1,5 @@
 package data.structure.tree;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -38,55 +37,88 @@ public class BoggleBoard {
 
     }
 
-    public List<String> boggle(List<List<Character>> board, List<String> dictionary) {
-
-        List<String> wordsList = new ArrayList<>();
+    public void boggle(char[][] board, List<String> dictionary) {
 
         Trie root = new Trie();
 
         // create trie based on the dictionary
-        for (String s : dictionary) {
+        for (String s : dictionary)
             insert(root, s);
-        }
+
 
         // verify if each letter in the board is a child of the root of the trie
         // consider the ones tha are child of the root. ignore the others
-        for (int i = 0; i < board.size(); i++) {
-            List<Character> line = board.get(i);
+        for (int i = 0; i < board.length; i++) { // loop through lines
 
-            for (int j = 0; j < line.size(); j++) {
-
-                char character = line.get(j);
-
-                Trie prefixChild =
-                        searchPrefix(root, String.valueOf(character));
-
-                if (prefixChild == null)
-                    continue;
-
-                if(prefixChild.leaf)
-                    wordsList.add(String.valueOf(character));
-
-                // get the children that has been considered and traverse
-                int index = character - 'A';
-                Trie rootChild = root.child[index];
-
-                // traverse the rootChild
-                for (int k = 0; k < 26; k++) {
-                    if (rootChild.child[k] != null) {
-
-//                        board.get
+            for (int j = 0; j < board[i].length; j++) { // loop through chars
 
 
+                if (root.child[board[i][j] - 'A'] != null) { // if the char [i][j] is a child of the root
 
-                    }
+                    boolean[][] visited = new boolean[board.length][board[i].length];
+                    visited[i][j] = true;
+
+                    String word = String.valueOf(board[i][j]);
+
+                    traverse(root.child[board[i][j] - 'A'], board, i, j, word, visited);
+
+                }
+            }
+        }
+
+    }
+
+    /**
+     * @param child   the trie that contains the parent as board[i][j]
+     * @param board   the board
+     * @param i       line
+     * @param j       element
+     * @param word
+     * @param visited
+     */
+    public void traverse(Trie child, char[][] board, int i, int j, String word, boolean[][] visited) {
+
+        if (child.leaf)
+            System.out.println(word);
+
+        visited[i][j] = true;
+
+        for (int k = 0; k < 26; k++) {
+            if (child.child[k] != null) {
+
+                char c = (char) (k + 'A');
+
+                if (i < board.length && i >= 0
+                        && j + 1 < board[1].length && j + 1 >= 0
+                        && !visited[i][j + 1]
+                        && c == board[i][j + 1]) {
+                    traverse(child.child[k], board, i, j + 1, word + board[i][j + 1], visited);
                 }
 
+                if (i + 1 < board.length && i + 1 >= 0
+                        && j < board[1].length && j >= 0
+                        && !visited[i + 1][j]
+                        && c == board[i + 1][j]) {
+                    traverse(child.child[k], board, i + 1, j, word + board[i + 1][j], visited);
+                }
+
+                if (i - 1 < board.length && i - 1 >= 0
+                        && j < board[1].length && j >= 0
+                        && !visited[i - 1][j]
+                        && c == board[i - 1][j]) {
+                    traverse(child.child[k], board, i - 1, j, word + board[i - 1][j], visited);
+                }
+
+                if (i < board.length && i >= 0
+                        && j - 1 < board[1].length && j - 1 >= 0
+                        && !visited[i][j - 1]
+                        && c == board[i][j - 1]) {
+                    traverse(child.child[k], board, i, j - 1, word + board[i][j - 1], visited);
+                }
 
             }
         }
 
-        return wordsList;
     }
 
     public void insert(Trie root, String key) {
@@ -105,50 +137,6 @@ public class BoggleBoard {
 
         child.leaf = true;
 
-    }
-
-    public boolean search(Trie root, String key) {
-
-        Trie child = root;
-
-        for (int i = 0; i < key.length(); i++) {
-
-            int index = key.charAt(i) - 'A';
-
-            if (child.child[index] == null)
-                return false;
-
-
-            child = child.child[index];
-
-        }
-
-        return child.leaf;
-    }
-
-    /**
-     * return null when the prefix is not contained in the trie. otherwise, return the child ,so you can check the leaf.
-     * @param root trie root
-     * @param key
-     * @return
-     */
-    public Trie searchPrefix(Trie root, String key) {
-
-        Trie child = root;
-
-        for (int i = 0; i < key.length(); i++) {
-
-            int index = key.charAt(i) - 'A';
-
-            if (child.child[index] == null)
-                return null;
-
-
-            child = child.child[index];
-
-        }
-
-        return child;
     }
 
 }
