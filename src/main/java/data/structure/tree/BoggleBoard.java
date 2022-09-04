@@ -1,6 +1,8 @@
 package data.structure.tree;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /*
 You are given a Boggle board, ie a rectangular table filled with letters, like the following:
@@ -29,43 +31,40 @@ In the above example the correct output would be the list [BURGER, MALT, READ]
 */
 public class BoggleBoard {
 
-    static class Trie {
+    private static final Set<String> stringSet = new HashSet<>();
 
+    static class Trie {
         Trie[] child = new Trie[26]; // english alphabet size
 
         boolean leaf;
-
     }
 
-    public void boggle(char[][] board, List<String> dictionary) {
+    public Set<String> boggle(char[][] board, List<String> dictionary) {
 
         Trie root = new Trie();
 
-        // create trie based on the dictionary
-        for (String s : dictionary)
+        for (String s : dictionary) // create trie based on the dictionary
             insert(root, s);
 
+        for (int i = 0; i < board.length; i++) { // each line
 
-        // verify if each letter in the board is a child of the root of the trie
-        // consider the ones tha are child of the root. ignore the others
-        for (int i = 0; i < board.length; i++) { // loop through lines
+            for (int j = 0; j < board[i].length; j++) { // each element
 
-            for (int j = 0; j < board[i].length; j++) { // loop through chars
-
-
-                if (root.child[board[i][j] - 'A'] != null) { // if the char [i][j] is a child of the root
+                if (root.child[board[i][j] - 'A'] != null) { // consider only the chars that are child of the root
 
                     boolean[][] visited = new boolean[board.length][board[i].length];
+
                     visited[i][j] = true;
 
                     String word = String.valueOf(board[i][j]);
 
-                    traverse(root.child[board[i][j] - 'A'], board, i, j, word, visited);
+                    stringSet.addAll(findWord(root.child[board[i][j] - 'A'], board, i, j, word, visited));
 
                 }
             }
         }
 
+        return stringSet;
     }
 
     /**
@@ -76,49 +75,58 @@ public class BoggleBoard {
      * @param word
      * @param visited
      */
-    public void traverse(Trie child, char[][] board, int i, int j, String word, boolean[][] visited) {
+    public Set<String> findWord(Trie child, char[][] board, int i, int j, String word, boolean[][] visited) {
 
         if (child.leaf)
-            System.out.println(word);
+            stringSet.add(word);
 
         visited[i][j] = true;
 
-        for (int k = 0; k < 26; k++) {
+        for (int k = 0; k < 26; k++) { // traverse the trie
+
             if (child.child[k] != null) {
 
-                char c = (char) (k + 'A');
+                char c = (char) (k + 'A'); // next character of the dictionary word
 
-                if (i < board.length && i >= 0
-                        && j + 1 < board[1].length && j + 1 >= 0
-                        && !visited[i][j + 1]
-                        && c == board[i][j + 1]) {
-                    traverse(child.child[k], board, i, j + 1, word + board[i][j + 1], visited);
+                // directions
+                // recursive call
+
+                // right
+                if (i < board.length && i >= 0 // safe check
+                        && j + 1 < board[0].length && j + 1 >= 0 // safe check
+                        && !visited[i][j + 1] // safe check
+                        && c == board[i][j + 1])  // is the next char of the dictionary word in the right ?
+                {
+                    findWord(child.child[k], board, i, j + 1, word + board[i][j + 1], visited);
                 }
 
+                // down
                 if (i + 1 < board.length && i + 1 >= 0
-                        && j < board[1].length && j >= 0
+                        && j < board[0].length && j >= 0
                         && !visited[i + 1][j]
                         && c == board[i + 1][j]) {
-                    traverse(child.child[k], board, i + 1, j, word + board[i + 1][j], visited);
+                    findWord(child.child[k], board, i + 1, j, word + board[i + 1][j], visited);
                 }
 
+                // up
                 if (i - 1 < board.length && i - 1 >= 0
-                        && j < board[1].length && j >= 0
+                        && j < board[0].length && j >= 0
                         && !visited[i - 1][j]
                         && c == board[i - 1][j]) {
-                    traverse(child.child[k], board, i - 1, j, word + board[i - 1][j], visited);
+                    findWord(child.child[k], board, i - 1, j, word + board[i - 1][j], visited);
                 }
 
+                // left
                 if (i < board.length && i >= 0
-                        && j - 1 < board[1].length && j - 1 >= 0
+                        && j - 1 < board[0].length && j - 1 >= 0
                         && !visited[i][j - 1]
                         && c == board[i][j - 1]) {
-                    traverse(child.child[k], board, i, j - 1, word + board[i][j - 1], visited);
+                    findWord(child.child[k], board, i, j - 1, word + board[i][j - 1], visited);
                 }
-
             }
         }
 
+        return stringSet;
     }
 
     public void insert(Trie root, String key) {
@@ -136,7 +144,6 @@ public class BoggleBoard {
         }
 
         child.leaf = true;
-
     }
 
 }

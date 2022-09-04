@@ -1,9 +1,11 @@
 package data.structure;
 
 import data.structure.tree.BoggleBoard;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Set;
 
 public class BoggleBoardTest {
 
@@ -12,7 +14,7 @@ public class BoggleBoardTest {
 
         BoggleBoard boggleBoard = new BoggleBoard();
 
-        boggleBoard.boggle(new char[][]{
+        Set<String> words = boggleBoard.boggle(new char[][]{
                         {'A', 'B', 'R', 'Z'},
                         {'R', 'U', 'E', 'A'},
                         {'G', 'E', 'D', 'D'},
@@ -21,6 +23,11 @@ public class BoggleBoardTest {
                 },
                 List.of("APPLE", "BURGER", "NOTE", "MALT", "PAPER", "READ", "RADAR", "SORT"));
 
+        Assertions.assertFalse(words.isEmpty());
+        Assertions.assertEquals(3, words.size());
+        Assertions.assertTrue(words.contains("BURGER"));
+        Assertions.assertTrue(words.contains("MALT"));
+        Assertions.assertTrue(words.contains("READ"));
 
     }
 
