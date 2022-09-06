@@ -4,7 +4,6 @@ import data.structure.tree.BoggleBoard;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
 import java.util.Set;
 
 public class BoggleBoardTest {
@@ -21,7 +20,7 @@ public class BoggleBoardTest {
                         {'S', 'R', 'L', 'T'},
                         {'O', 'M', 'A', 'K'},
                 },
-                List.of("APPLE", "BURGER", "NOTE", "MALT", "PAPER", "READ", "RADAR", "SORT"));
+                new String[]{"APPLE", "BURGER", "NOTE", "MALT", "PAPER", "READ", "RADAR", "SORT"});
 
         Assertions.assertFalse(words.isEmpty());
         Assertions.assertEquals(3, words.size());

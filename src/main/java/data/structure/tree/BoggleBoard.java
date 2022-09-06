@@ -1,7 +1,6 @@
 package data.structure.tree;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /*
@@ -31,114 +30,114 @@ In the above example the correct output would be the list [BURGER, MALT, READ]
 */
 public class BoggleBoard {
 
-    private static final Set<String> stringSet = new HashSet<>();
+    private static final Set<String> WORDS = new HashSet<>();
 
     static class Trie {
-        Trie[] child = new Trie[26]; // english alphabet size
+
+        Trie[] child = new Trie[26]; // english alphabet
 
         boolean leaf;
-    }
 
-    public Set<String> boggle(char[][] board, List<String> dictionary) {
-
-        Trie root = new Trie();
-
-        for (String s : dictionary) // create trie based on the dictionary
-            insert(root, s);
-
-        for (int i = 0; i < board.length; i++) { // each line
-
-            for (int j = 0; j < board[i].length; j++) { // each element
-
-                if (root.child[board[i][j] - 'A'] != null) { // consider only the chars that are child of the root
-
-                    boolean[][] visited = new boolean[board.length][board[i].length];
-
-                    visited[i][j] = true;
-
-                    String word = String.valueOf(board[i][j]);
-
-                    stringSet.addAll(findWord(root.child[board[i][j] - 'A'], board, i, j, word, visited));
-
-                }
-            }
-        }
-
-        return stringSet;
     }
 
     /**
-     * @param child   the trie that contains the parent as board[i][j]
-     * @param board   the board
-     * @param i       line
-     * @param j       element
-     * @param word
-     * @param visited
+     * @param board boggleBoard
+     * @param d     dictionary
      */
-    public Set<String> findWord(Trie child, char[][] board, int i, int j, String word, boolean[][] visited) {
+    public Set<String> boggle(char[][] board, String[] d) {
 
-        if (child.leaf)
-            stringSet.add(word);
+        /*
+         - create a tree (trie data structure) using the dictionary words
+         - loop through the board
+         - consider only the characters that are in the first layer of children in the tree
+         - for each character recursively loop through the possibilities
+         - if any word is formed add to the hashset and return it
+         */
 
-        visited[i][j] = true;
+        Trie root = new Trie();
 
-        for (int k = 0; k < 26; k++) { // traverse the trie
+        for (String s : d) { // create trie based on the dictionary
+            insert(s, root);
+        }
 
-            if (child.child[k] != null) {
+        for (int i = 0; i < board.length; i++) { // i = line
+            for (int j = 0; j < board[i].length; j++) { // j = element
 
-                char c = (char) (k + 'A'); // next character of the dictionary word
+                int index = board[i][j] - 'A';
+                if (root.child[index] != null) { // consider only the chars that are child of the root
 
-                // directions
-                // recursive call
+                    boolean[][] visited = new boolean[board.length][board[0].length];
 
-                // right
-                if (i < board.length && i >= 0 // safe check
-                        && j + 1 < board[0].length && j + 1 >= 0 // safe check
-                        && !visited[i][j + 1] // safe check
-                        && c == board[i][j + 1])  // is the next char of the dictionary word in the right ?
-                {
-                    findWord(child.child[k], board, i, j + 1, word + board[i][j + 1], visited);
-                }
+                    String word = String.valueOf(board[i][j]);
 
-                // down
-                if (i + 1 < board.length && i + 1 >= 0
-                        && j < board[0].length && j >= 0
-                        && !visited[i + 1][j]
-                        && c == board[i + 1][j]) {
-                    findWord(child.child[k], board, i + 1, j, word + board[i + 1][j], visited);
-                }
+                    visited[i][j] = true;
 
-                // up
-                if (i - 1 < board.length && i - 1 >= 0
-                        && j < board[0].length && j >= 0
-                        && !visited[i - 1][j]
-                        && c == board[i - 1][j]) {
-                    findWord(child.child[k], board, i - 1, j, word + board[i - 1][j], visited);
-                }
+                    findWord(board, root.child[index], visited, word, i, j);
 
-                // left
-                if (i < board.length && i >= 0
-                        && j - 1 < board[0].length && j - 1 >= 0
-                        && !visited[i][j - 1]
-                        && c == board[i][j - 1]) {
-                    findWord(child.child[k], board, i, j - 1, word + board[i][j - 1], visited);
                 }
             }
         }
 
-        return stringSet;
+        return WORDS;
+
     }
 
-    public void insert(Trie root, String key) {
+    private void findWord(char[][] board, Trie tree, boolean[][] temp, String word, int i, int j) {
+
+        temp[i][j] = true;
+
+        if (tree.leaf)
+            WORDS.add(word);
+
+        for (int k = 0; k < 26; k++) { // traverse the trie
+
+            if (tree.child[k] != null) {
+
+                char v = (char) (k + 'A'); // next character of the dictionary word
+
+                // i, j-1 (left)
+                if (i >= 0 && i < board.length &&
+                        j - 1 >= 0 && j - 1 < board[0].length &&
+                        board[i][j - 1] == v) {
+                    findWord(board, tree.child[k], temp, word + v, i, j - 1);
+                }
+
+                // i, j+1 (right)
+                if (i >= 0 && i < board.length &&
+                        j + 1 >= 0 && j + 1 < board[0].length &&
+                        board[i][j + 1] == v) {
+                    findWord(board, tree.child[k], temp, word + v, i, j + 1);
+                }
+
+                // i-1, j (up)
+                if (i - 1 >= 0 && i - 1 < board.length &&
+                        j >= 0 && j < board[0].length &&
+                        board[i - 1][j] == v) {
+                    findWord(board, tree.child[k], temp, word + v, i - 1, j);
+                }
+
+                // i+1, j (down)
+                if (i + 1 >= 0 && i + 1 < board.length &&
+                        j >= 0 && j < board[0].length &&
+                        board[i + 1][j] == v) {
+                    findWord(board, tree.child[k], temp, word + v, i + 1, j);
+                }
+
+            }
+        }
+
+    }
+
+    private void insert(String key, Trie root) {
 
         Trie child = root;
 
         for (int i = 0; i < key.length(); i++) {
 
-            int index = key.charAt(i) - 'A';
-
-            if (child.child[index] == null)
+            int index = key.toUpperCase().charAt(i) - 'A';
+            if (child.child[index] == null) {
                 child.child[index] = new Trie();
+            }
 
             child = child.child[index];
         }
