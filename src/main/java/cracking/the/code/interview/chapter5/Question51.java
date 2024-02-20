@@ -5,7 +5,11 @@ package cracking.the.code.interview.chapter5;
  * You can assume that the bits j through i have enough space to fit all of M. That is, if M=10011, you can assume that there ate at least 5 bits between j and i.
  * You would not, for example, have j=3 and i=2, because M could not fully fit between bit 3 and 2.
  */
-public class Question51 {
+public final class Question51 {
+
+    private Question51() {
+
+    }
 
     private static final long BITS_32 = (long) Math.pow(2, 32) - 1;
 

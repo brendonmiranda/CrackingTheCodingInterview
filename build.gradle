@@ -2,6 +2,16 @@ plugins {
     id 'java'
 }
 
+apply plugin: 'checkstyle'
+
+checkstyle {
+    toolVersion = "9.3"
+}
+
+dependencies {
+    checkstyle("io.spring.javaformat:spring-javaformat-checkstyle:0.0.41")
+}
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 

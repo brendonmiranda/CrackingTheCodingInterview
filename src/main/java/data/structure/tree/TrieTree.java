@@ -5,7 +5,11 @@ package data.structure.tree;
  * While a hash table can quickly look up whether a string is a valid word, it cannot tell us if a string is a prefix of any valid words.
  * A trie can do this very quickly.
  */
-public class TrieTree {
+public final class TrieTree {
+
+    private TrieTree() {
+
+    }
 
     public static class Trie {
 

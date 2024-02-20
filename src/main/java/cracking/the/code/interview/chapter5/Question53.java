@@ -4,7 +4,11 @@ package cracking.the.code.interview.chapter5;
  * You have an integer, and you can flip exactly one bit from 0 to 1.
  * Write code to find the length of the longest sequence of 1's you could create.
  */
-public class Question53 {
+public final class Question53 {
+
+    private Question53() {
+
+    }
 
     public static int findLongestSequenceOf1s(long n) {
 
@@ -16,10 +20,12 @@ public class Question53 {
 
             if ((n & 1) != 0) {
                 current++;
-            } else {
+            }
+            else {
                 if ((n & 2) != 0) { // next bit is one
                     previous = current;
-                } else { // next bit is zero
+                }
+                else { // next bit is zero
                     previous = 0;
                 }
                 current = 0;
