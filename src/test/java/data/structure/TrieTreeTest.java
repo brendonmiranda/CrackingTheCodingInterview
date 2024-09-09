@@ -19,7 +19,12 @@ public class TrieTreeTest {
 
         Assertions.assertTrue(TrieTree.search(root, "foo"));
         Assertions.assertTrue(TrieTree.search(root, "bar"));
-        Assertions.assertFalse(TrieTree.search(root, "fo"));
+
+        Assertions.assertTrue(TrieTree.search(root, "fo"));
+        Assertions.assertTrue(TrieTree.search(root, "ba"));
+
+        Assertions.assertFalse(TrieTree.search(root, "fb"));
+
         Assertions.assertFalse(TrieTree.search(root, "fooo"));
         Assertions.assertFalse(TrieTree.search(root, "barr"));
 

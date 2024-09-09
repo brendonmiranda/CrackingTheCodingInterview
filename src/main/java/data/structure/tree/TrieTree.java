@@ -11,7 +11,7 @@ public class TrieTree {
 
         public Trie[] child = new Trie[26]; // 26 = alphabet size
 
-        public boolean leaf;
+        public boolean leaf; // a node is called a leaf if it has no children
 
     }
 
@@ -30,9 +30,9 @@ public class TrieTree {
             int index = key.toUpperCase().charAt(i) - 'A';
 
             if (child.child[index] == null)
-                child.child[index] = new Trie();
+                child.child[index] = new Trie(); // this is the actual insert of the character (or key) in the tree. In other words it inserts a new Trie in the index. The index not being null means a character in the tree. e.g. 5 = f, 14=o
 
-            child = child.child[index];
+            child = child.child[index]; // positioning the tree in this index
         }
 
         child.leaf = true;
@@ -58,7 +58,8 @@ public class TrieTree {
             root = root.child[k];
         }
 
-        return root.leaf;
+        // return root.leaf;
+        return true; // make it possible to search for part of the keys
     }
 
 
