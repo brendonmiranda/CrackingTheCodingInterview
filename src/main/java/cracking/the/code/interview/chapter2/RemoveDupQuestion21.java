@@ -1,4 +1,4 @@
-package data.structure.linkedlist;
+package cracking.the.code.interview.chapter2;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Write code to remove duplicates from an unsorted linked list.
  */
-public class RemoveDup {
+public class RemoveDupQuestion21 {
 
     public static class Node {
         public Node prev;

@@ -1,12 +1,11 @@
-package data.structure;
+package cracking.the.code.interview.chapter2;
 
-import data.structure.linkedlist.RemoveDup;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 
-public class RemoveDupTest {
+public class RemoveDupQuestion21Test {
 
     @Test
     public void removeDupTest() {
@@ -18,7 +17,7 @@ public class RemoveDupTest {
         linkedList.add(6);
         linkedList.add(2);
 
-        RemoveDup removeDup = new RemoveDup();
+        RemoveDupQuestion21 removeDup = new RemoveDupQuestion21();
         var removedDuplicatedDoublyLinkedList =
                 removeDup.removeDup(makeDoublyCustomLinkedList(linkedList));
 
@@ -49,7 +48,7 @@ public class RemoveDupTest {
         linkedList.add(6);
         linkedList.add(2);
 
-        RemoveDup removeDup = new RemoveDup();
+        RemoveDupQuestion21 removeDup = new RemoveDupQuestion21();
         var removedDuplicatedDoublyLinkedList =
                 removeDup.removeDupWithNoBuffer(makeDoublyCustomLinkedList(linkedList));
 
@@ -70,17 +69,17 @@ public class RemoveDupTest {
         Assertions.assertNull(removedDuplicatedDoublyLinkedList.next);
     }
 
-    public RemoveDup.Node makeDoublyCustomLinkedList(final LinkedList<Integer> linkedList) {
-        final RemoveDup.Node root = new RemoveDup.Node();
+    public RemoveDupQuestion21.Node makeDoublyCustomLinkedList(final LinkedList<Integer> linkedList) {
+        final RemoveDupQuestion21.Node root = new RemoveDupQuestion21.Node();
 
-        RemoveDup.Node child = root;
+        RemoveDupQuestion21.Node child = root;
         for (int i = 0; i < linkedList.size(); i++) {
             int value = linkedList.get(i);
             child.value = value;
-            RemoveDup.Node prev = child;
+            RemoveDupQuestion21.Node prev = child;
 
             if (i != linkedList.size() - 1) { // last loop
-                child.next = new RemoveDup.Node();
+                child.next = new RemoveDupQuestion21.Node();
                 child = child.next;
                 child.prev = prev;
             }
