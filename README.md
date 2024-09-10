@@ -1,6 +1,6 @@
 # Cracking The Coding Interview Questions
 
-This repo register my evolution in the Cracking The Coding Interview book as I go through its questions and solutions. 
+This repo register my evolution in the Cracking The Coding Interview book as I go through its questions and solutions. Check the [tests](https://github.com/brendonmiranda/CrackingTheCodingInterview/tree/main/src/test/java) for the given solutions.
 
 # Hackerrank.com Challenges
 
