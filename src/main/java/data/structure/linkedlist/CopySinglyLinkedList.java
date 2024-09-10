@@ -1,6 +1,6 @@
-package data.structure.tree;
+package data.structure.linkedlist;
 
-import java.util.List;
+import java.util.LinkedList;
 
 /**
  * You'll receive a singly linked list that points to only one direction. You need to return a copy of the singly linked list.
@@ -14,15 +14,15 @@ public class CopySinglyLinkedList {
         public Node next;
     }
 
-    public Node copySinglyLinkedList(final List<Integer> list) {
+    public Node copySinglyLinkedList(final LinkedList<Integer> linkedList) {
         final Node root = new Node();
 
         Node child = root;
-        for (int i = 0; i < list.size(); i++) {
-            int value = list.get(i);
+        for (int i = 0; i < linkedList.size(); i++) {
+            int value = linkedList.get(i);
             child.value = value;
 
-            if (i != list.size() - 1) { // last loop
+            if (i != linkedList.size() - 1) { // last loop
                 child.next = new Node();
                 child = child.next;
             }

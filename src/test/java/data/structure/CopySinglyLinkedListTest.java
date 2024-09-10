@@ -1,10 +1,10 @@
 package data.structure;
 
-import data.structure.tree.CopySinglyLinkedList;
+import data.structure.linkedlist.CopySinglyLinkedList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public class CopySinglyLinkedListTest {
 
@@ -13,7 +13,14 @@ public class CopySinglyLinkedListTest {
 
         final CopySinglyLinkedList copySinglyLinkedList = new CopySinglyLinkedList();
 
-        CopySinglyLinkedList.Node n = copySinglyLinkedList.copySinglyLinkedList(List.of(1, 5, 3, 6, 2));
+        final LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(1);
+        linkedList.add(5);
+        linkedList.add(3);
+        linkedList.add(6);
+        linkedList.add(2);
+
+        CopySinglyLinkedList.Node n = copySinglyLinkedList.copySinglyLinkedList(linkedList);
 
         Assertions.assertEquals(1, n.value);
         n = n.next;
