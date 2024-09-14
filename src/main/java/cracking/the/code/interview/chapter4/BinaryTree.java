@@ -21,12 +21,28 @@ public class BinaryTree {
             return root;
         }
 
-        if (v <= root.value)
+        if (v < root.value)
             root.left = insert(root.left, v);
-        else
+        else if (v > root.value)
             root.right = insert(root.right, v);
 
         return root;
+    }
+
+    public Node search(Node root, int v) {
+
+        if (root == null) {
+            throw new RuntimeException(v + " Not found.");
+        }
+
+        if (v == root.value) {
+            return root;
+        }else if (v < root.value ) {
+            return search(root.left, v);
+        } else {
+            return search(root.right, v);
+        }
+
     }
 
     public void inOrderTraversal(Node n) {

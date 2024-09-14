@@ -15,9 +15,13 @@ public class BinaryTreeTest {
         binaryTree.insert(root, 2);
         binaryTree.insert(root, 1);
         binaryTree.insert(root, 6);
+        binaryTree.insert(root, 6); //(it should not allow to repeat)
         binaryTree.insert(root, 20);
 
         binaryTree.inOrderTraversal(root);
+
+        var v = binaryTree.search(root, 8);
+        System.out.println(v.value + " Found.");
     }
 
 }
