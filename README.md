@@ -35,7 +35,7 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 # Chapter 4 | Trees and Graphs 
 
 [My Trie Implementation (insert/search)](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/data/structure/tree/TrieTree.java)
-
+[My Binary Tree Implementation](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter4/BinaryTree.java)
 
 # Chapter 5 | Bit Manipulation
 
