@@ -1,4 +1,4 @@
-package interview;
+package cracking.the.code.interview.chapter4;
 
 public class BinarySearch {
 
