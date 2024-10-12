@@ -1,6 +1,6 @@
 package aws;
 
-public class AmazonReviewScore {
+public class ReviewScore {
 
     private class Trie {
         Trie[] alpha = new Trie[26];

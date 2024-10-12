@@ -31,8 +31,10 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 # AWS Challenges
 
 [Amazon Review Score](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/AmazonReviewScore.java)
-[Optimizing Box Weights](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/AmazonPackItems.java)
-[Number of Suitable Locations](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/AmazonNumberOfSuitableLocations.java)
+
+[Optimizing Box Weights](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/OptimizingBoxWeights.java)
+
+[Number of Suitable Locations](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/NumberOfSuitableLocations.java)
 
 # Chapter 2 | Linked Lists 
 

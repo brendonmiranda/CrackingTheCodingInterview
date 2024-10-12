@@ -1,6 +1,6 @@
 package aws;
 
-public class AmazonNumberOfSuitableLocations {
+public class NumberOfSuitableLocations {
 
     /**
      * // 2 * abs(x - center[i])

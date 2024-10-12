@@ -2,7 +2,7 @@ package aws;
 
 import java.util.*;
 
-public class AmazonPackItems {
+public class OptimizingBoxWeights {
 
     /*
         The intersection of A and B is null.
