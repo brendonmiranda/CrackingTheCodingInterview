@@ -36,6 +36,8 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Number of Suitable Locations](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/NumberOfSuitableLocations.java)
 
+[Get Max Charge]()
+
 # Chapter 2 | Linked Lists 
 
 [**2.1** Remove Dups: Write code to remove duplicates from an unsorted linked list.](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/cracking/the/code/interview/chapter2/RemoveDupQuestion21.java)
