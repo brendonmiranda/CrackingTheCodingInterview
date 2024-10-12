@@ -5,7 +5,7 @@ public class NumberOfSuitableLocations {
     /**
      * // 2 * abs(x - center[i])
      */
-    public static int numberOfSuitableLocationsSearch(int[] center, int d) {
+    public int numberOfSuitableLocationsSearch(int[] center, int d) {
 
         long low = -1000000000L;
         long high = 1000000000L;
