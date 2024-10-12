@@ -21,7 +21,7 @@ public class BinaryTreeTest {
         binaryTree.inOrderTraversal(root);
 
         var v = binaryTree.search(root, 8);
-        System.out.println(v.value + " Found.");
+//        System.out.println(v.value + " Found.");
     }
 
 }
