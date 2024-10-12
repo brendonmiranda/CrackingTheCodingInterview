@@ -31,6 +31,8 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 # AWS Challenges
 
 [Amazon Review Score](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/AmazonReviewScore.java)
+[Optimizing Box Weights]()
+[Number of Suitable Locations]()
 
 # Chapter 2 | Linked Lists 
 
