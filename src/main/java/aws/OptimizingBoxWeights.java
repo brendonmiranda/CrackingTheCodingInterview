@@ -9,7 +9,7 @@ public class OptimizingBoxWeights {
         The union of A and B is equal to the original array.
         The number of elements in subset A is minimal.
         The sum of A's weights is greater than the sum of B's weights.*/
-    public static int[] packItems(int[] arr) {
+    public int[] packItems(int[] arr) {
 
         Arrays.sort(arr);
 
