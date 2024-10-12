@@ -36,7 +36,7 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Number of Suitable Locations](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/NumberOfSuitableLocations.java)
 
-[Get Max Charge]()
+[Get Max Charge](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/GetMaxCharge.java)
 
 # Chapter 2 | Linked Lists 
 
