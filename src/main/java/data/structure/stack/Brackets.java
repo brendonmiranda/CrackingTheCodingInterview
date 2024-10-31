@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  * Check if string is a balanced bracket or not. e.g (([{}])) is balanced, (([{])) it is not.
- * That's a stack data structure solution o(n)
+ * That's a stack data structure solution o(n) in which n is the amount of characters in the string
  */
 public class Brackets {
 

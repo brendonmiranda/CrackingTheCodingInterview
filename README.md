@@ -30,6 +30,8 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [File System Recursion](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/algorithm/recursion/FileSystem.java)
 
+[Balanced Bracket](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/data/structure/stack/Brackets.java)
+
 # AWS Challenges
 
 [Review Score](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/ReviewScore.java)
