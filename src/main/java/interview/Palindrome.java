@@ -32,7 +32,7 @@ public class Palindrome {
         if (oddCount == 1)
             return 1;
 
-        if (oddCount == 2)
+        if (oddCount == 2) // i forgot this edge case
             return 2;
 
 
