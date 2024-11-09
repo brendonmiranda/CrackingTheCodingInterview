@@ -11,21 +11,19 @@ public class LonelyInteger {
 
     public int lonelyInteger(List<Integer> a) {
 
-        Set<Integer> integerSet = new HashSet<>();
+        Set<Integer> buffer = new HashSet<>();
+        int sum = 0;
+        int sumOfUniqueElements = 0;
 
-        long listSum = 0;
-        long setSum = 0;
-
-        for (Integer i : a) {
-            integerSet.add(i);
-            listSum += i;
+        for (int i : a) {
+            sum += i;
+            if (!buffer.contains(i)) {
+                sumOfUniqueElements += i;
+                buffer.add(i);
+            }
         }
 
-        for (Integer i : integerSet) {
-            setSum += i;
-        }
-
-        return Long.valueOf((2 * setSum) - listSum).intValue();
+        return (2 * sumOfUniqueElements) - sum;
 
     }
 

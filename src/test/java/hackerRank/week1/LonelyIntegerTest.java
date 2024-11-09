@@ -17,6 +17,10 @@ public class LonelyIntegerTest {
 
         Assertions.assertEquals(4, r);
 
+        r = lonelyInteger.lonelyInteger(List.of(1, 2, 3, 4, 5, 1, 2, 3, 4));
+
+        Assertions.assertEquals(5, r);
+
     }
 
 }
