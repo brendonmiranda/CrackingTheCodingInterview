@@ -32,7 +32,9 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Balanced Bracket](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/data/structure/stack/Brackets.java)
 
-[Staircase]()
+[Staircase](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/algorithm/recursion/Staircase.java)
+
+[Combine Arrays](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/squarespace/CombineArrays.java)
 
 # AWS Challenges
 
