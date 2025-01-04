@@ -38,7 +38,7 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Tower Breakers](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week2/TowerBreakers.java)
 
-[Find ZigZag Sequence]()
+[Find ZigZag Sequence](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week2/FindZigZagSequence.java)
 
 # AWS Challenges
 
