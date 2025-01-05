@@ -40,7 +40,7 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Find ZigZag Sequence](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week2/FindZigZagSequence.java)
 
-[Super Digit]()
+[Super Digit](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week2/SuperDigit.java)
 
 # AWS Challenges
 
