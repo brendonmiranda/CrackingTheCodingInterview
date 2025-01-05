@@ -1,0 +1,34 @@
+package hackerRank.week2;
+
+public class CounterGame {
+    public static String counterGame(long n) {
+        //  L & R
+        Set<Long> set = new HashSet<>();
+        
+        long powered = 2;
+        for (int i=1; i<=64; i++) {
+            set.add(powered);
+            powered *= 2;
+        }
+        
+        // 6
+        // 3 
+        boolean louise = false;
+        while (n != 1) {
+            
+            if (set.contains(n)) {
+                n = n/2;
+            } else {
+                Double v = Math.log(n) / Math.log(2); // can't calculate log2 in java. to do so need to divide by log(2) like i did there
+                Double next = Math.pow(2, v.longValue());
+                n=n-next.longValue();
+            }
+            
+            louise = louise ? false : true; // flip
+            
+        }
+        
+        return louise ? "Louise" : "Richard";
+    
+    }
+}

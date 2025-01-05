@@ -42,6 +42,8 @@ This repo register my evolution in the Cracking The Coding Interview book as I g
 
 [Super Digit](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/hackerRank/week2/SuperDigit.java)
 
+[Counter Game]()
+
 # AWS Challenges
 
 [Review Score](https://github.com/brendonmiranda/CrackingTheCodingInterview/blob/main/src/main/java/aws/ReviewScore.java)

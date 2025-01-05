@@ -1,3 +1,7 @@
+package hackerRank.week2;
+
+import java.util.LinkedList;
+
 public class SuperDigit {
 
     public static int superDigit(String n, int k) {
